@@ -1,0 +1,12 @@
+Reconsider implementation of attack method, can we generalize?
+
+Merchant
+Should there be an attacked method?
+
+Character
+Finish races (shade will be finished first)
+Add support for reading stats from a file
+	- There would be issues if we can't load stats from MIL
+	- Child class (Player or NPC) defines stats
+	- Before Child class constructor runs, we rely on Parent (Character) class' constructor to use stats to define initial health
+	- The only way for Child class to define stats before Parent constructor runs is through MIL, or refactoring with new methods, resetStats()
